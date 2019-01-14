@@ -13,7 +13,7 @@ namespace PointSniper{
 		private readonly Vector2 center;
 		
 		public RectangleSniper(Vector2 start_point,Vector2 end_point){
-			leftUnder=new Vector2(Math.Min(start_point.x,end_point.y),Math.Min(start_point.y,end_point.y));
+			leftUnder=new Vector2(Math.Min(start_point.x,end_point.x),Math.Min(start_point.y,end_point.y));
 			rightTop=new Vector2(Math.Max(start_point.x,end_point.x),Math.Max(start_point.y,end_point.y));
 			
 			center=new Vector2((Math.Abs(rightTop.x)-Math.Abs(leftUnder.x))/2,(Math.Abs(rightTop.y)-Math.Abs(leftUnder.y))/2);
